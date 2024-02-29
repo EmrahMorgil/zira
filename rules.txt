@@ -1,0 +1,8 @@
+1- Klasör isimleri daima küçük harfle başlanmalı. Componentların baş harfi büyük harfle başlamalı. klasör de kebab casing isimlendirme olmalı. component isimlerinde
+    camel casing olmalı.
+2- Components içerisine app klasöründe oluşturulan rootlar ın componentleri çağrılmalı.
+3- Core içerisinde model / enum vs bulunmalı.
+4- Helpers içerisine kodu kısaltmaya yarayan fonksiyonlar, cookie manager vs vs konulabilir.
+5- Layouts a navbar footer vs konulabilir.
+6- Utils' e api ile etkileşime gireceğin fonksiyonlar konulabilir.
+7- Assets'e css klasörleri
