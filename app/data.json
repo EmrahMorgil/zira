@@ -1,0 +1,64 @@
+[
+  {
+    "id": "a1",
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 1,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/414666935_1603696743726225_1685872359615186441_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSp4BPo-9RjHgESmP5M6hLUlXbEq8XjtyMe6t15hZp53g&oe=65F16793&_nc_sid=e6ed6c&_nc_cat=101"
+  },
+  {
+    "id": "a2",
+    "name": "Lorem Ipsum is simply dummy text.",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 1,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/414666935_1603696743726225_1685872359615186441_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSp4BPo-9RjHgESmP5M6hLUlXbEq8XjtyMe6t15hZp53g&oe=65F16793&_nc_sid=e6ed6c&_nc_cat=101"
+  },
+  {
+    "id": "a3",
+    "name": "Lorem Ipsum is simply dummy text.",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 2,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/145095677_3251006041824699_5531312742710067517_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSU_xXmLL689DKTmmuIYWn18ZhDZzwKYbonwDLA3KhSNg&oe=65ECA144&_nc_sid=e6ed6c&_nc_cat=100"
+  },
+  {
+    "id": "a4",
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 3,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/145095677_3251006041824699_5531312742710067517_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSU_xXmLL689DKTmmuIYWn18ZhDZzwKYbonwDLA3KhSNg&oe=65ECA144&_nc_sid=e6ed6c&_nc_cat=100"
+  },
+  {
+    "id": "a5",
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 3,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/145095677_3251006041824699_5531312742710067517_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSU_xXmLL689DKTmmuIYWn18ZhDZzwKYbonwDLA3KhSNg&oe=65ECA144&_nc_sid=e6ed6c&_nc_cat=100"
+  },
+  {
+    "id": "a6",
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 1,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/414666935_1603696743726225_1685872359615186441_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSp4BPo-9RjHgESmP5M6hLUlXbEq8XjtyMe6t15hZp53g&oe=65F16793&_nc_sid=e6ed6c&_nc_cat=101"
+  },
+  {
+    "id": "a7",
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 1,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/414666935_1603696743726225_1685872359615186441_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSp4BPo-9RjHgESmP5M6hLUlXbEq8XjtyMe6t15hZp53g&oe=65F16793&_nc_sid=e6ed6c&_nc_cat=101"
+  },
+  {
+    "id": "a8",
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 1,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/145095677_3251006041824699_5531312742710067517_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSU_xXmLL689DKTmmuIYWn18ZhDZzwKYbonwDLA3KhSNg&oe=65ECA144&_nc_sid=e6ed6c&_nc_cat=100"
+  },{
+    "id": "a9",
+    "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "description": "İlgili taskların düzenlenmesi bla bla..",
+    "type": 1,
+    "image": "https://media-ist1-1.cdn.whatsapp.net/v/t61.24694-24/145095677_3251006041824699_5531312742710067517_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSU_xXmLL689DKTmmuIYWn18ZhDZzwKYbonwDLA3KhSNg&oe=65ECA144&_nc_sid=e6ed6c&_nc_cat=100"
+  }
+]
