@@ -1,94 +1,130 @@
-"use client"
-import React, { useState } from 'react'
-import $ from "jquery";
+"use client";
+import React, { useEffect, useState } from "react";
+import data from "./data.json";
 
 const Projects = () => {
+  useEffect(() => {
+    prepareData();
+  }, []);
 
-    const [widgets, setWidgets] = useState<string>("");
+  const prepareData = () => {
+    data.forEach((item) => {
+      switch (item.type) {
+        case 1:
+          prepareHtml(item, "open");
+          break;
+        case 2:
+          prepareHtml(item, "inprogress");
+          break;
+        case 3:
+          prepareHtml(item, "review");
+          break;
+        case 4:
+          prepareHtml(item, "done");
+          break;
+      }
+    });
+  };
 
+  const prepareHtml = (item: any, dragType: string) => {
+    var progress = document.getElementById(dragType);
+    var html = document.createElement("div");
+    html.id = item.id;
+    html.innerText = item.name;
+    html.className =
+      "h-40 bg-[#78d5e3] flex justify-center items-center m-2 hover:drop-shadow-2xl hover:cursor-move";
+    html.draggable = true;
+    html.ondragstart = handleOnDrag;
+    progress?.appendChild(html);
+  };
 
-    const review = {
-        open: "<div class='w-20 h-20 bg-red-700 flex justify-center items-center' draggable='true'>Widget A</div>",
-        inprogress: "", review: "", done: ""
-    };
+  const handleOnDrag = (e: any) => {
+    // sürüklenen divin id sini setledik
+    e.dataTransfer.setData("widget", e.target.id);
+  };
 
-    const handleOnDrag = (e: React.DragEvent<HTMLDivElement>) => {
+  const handleOnDrop = (e: any, dragType: string) => {
+    e.preventDefault();
+    e.currentTarget.classList.remove("bg-[#93dde9]");
+    e.currentTarget.childNodes.forEach((child: any)=>{
+      child.style.pointerEvents = "";
+    });
+    const widget = e.dataTransfer.getData("widget");
+    const appendDiv = document.getElementById(dragType);
+    if (appendDiv) appendDiv.appendChild(document.getElementById(widget)!);
+  };
 
-        console.log(e);
+  const handleDragEnter = (e: React.DragEvent) => {
+    // üzerindeyken verilecek class.
+    e.preventDefault();
+    e.currentTarget.classList.add("bg-[#93dde9]");
+    // üzerindeyken tüm child ların pointerEventini none yapıyoruz ki child ların üzerine gelince üst divdeki hover bg color u bozulmasın.
+    e.currentTarget.childNodes.forEach((child: any)=>{
+      child.style.pointerEvents = "none";
+    });
+    
+  };
+  const handleDragLeave = (e: React.DragEvent) => {
+    // ilk etapta sürüklenen component dan ayrıldığı zaman class ını kaldır.
+    e.preventDefault();
+    e.currentTarget.classList.remove("bg-[#93dde9]");
+    e.currentTarget.childNodes.forEach((child: any)=>{
+      child.style.pointerEvents = "";
+    });
+  };
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
 
-        // e.dataTransfer.setData("widget", e.target);
-    }
+  return (
+    <div className="m-20 flex gap-5 justify-center">
+      <div className="flex flex-col items-center">
+        <h6>Open</h6>
+        <div
+          id="open"
+          className="w-60 min-h-160 border-2 border-[#c9eef4] p-2 hover:bg-[#d5f2f6]"
+          onDrop={(e) => handleOnDrop(e, "open")}
+          onDragEnter={(e)=>handleDragEnter(e)}
+          onDragLeave={handleDragLeave}
+          onDragOver={handleDragOver}
+        />
+      </div>
 
-    const handleOnDrop = (e: React.DragEvent) => {
-        const widgetType = e.dataTransfer.getData("widget") as string;
-        var divElement = document.createElement("div") as any;
-        divElement.innerHTML = widgetType;
-        var id = divElement.firstChild.id
-        // $()
-        $("#" + id).remove();
-        console.log(id);
-        setWidgets(widgets + widgetType);
-    }
+      <div className="flex flex-col items-center">
+        <h6>In Progress</h6>
+        <div
+          id="inprogress"
+          className="w-60 min-h-160 border-2 border-[#c9eef4] p-2 hover:bg-[#d5f2f6]"
+          onDrop={(e) => handleOnDrop(e, "inprogress")}
+          onDragEnter={(e)=>handleDragEnter(e)}
+          onDragLeave={handleDragLeave}
+          onDragOver={handleDragOver}
+        />
+      </div>
+      <div className="flex flex-col items-center">
+        <h6>Review</h6>
+        <div
+          id="review"
+          className="w-60 min-h-160 border-2 border-[#c9eef4] p-2 hover:bg-[#d5f2f6]"
+          onDrop={(e) => handleOnDrop(e, "review")}
+          onDragEnter={(e)=>handleDragEnter(e)}
+          onDragLeave={handleDragLeave}
+          onDragOver={handleDragOver}
+        />
+      </div>
+      <div className="flex flex-col items-center">
+        <h6>Done</h6>
+        <div
+          id="done"
+          className="w-60 min-h-160 border-2 border-[#c9eef4] p-2 hover:bg-[#d5f2f6]"
+          onDrop={(e) => handleOnDrop(e, "done")}
+          onDragEnter={(e)=>handleDragEnter(e)}
+          onDragLeave={handleDragLeave}
+          onDragOver={handleDragOver}
+        />
+      </div>
+    </div>
+  );
+};
 
-    const handleDragOver = (e: React.DragEvent) => {
-        e.preventDefault();
-    }
-
-    return (
-        <div className='m-10 flex gap-5'>
-            <div className='w-20 h-60 border-4 border-black' onDrop={handleOnDrop} onDragOver={handleDragOver}>
-                <div id='test1' className='w-20 h-20 bg-red-700 flex justify-center items-center' draggable onDragStart={(e) => handleOnDrag(e)}>
-                    Widget A
-                </div>
-                <div id='test2' className='w-20 h-20 bg-red-700 flex justify-center items-center' draggable onDragStart={(e) => handleOnDrag(e)}>
-                    Widget B
-                </div>
-                <div id='test3' className='w-20 h-20 bg-red-700 flex justify-center items-center' draggable onDragStart={(e) => handleOnDrag(e)}>
-                    Widget C
-                </div>
-            </div>
-
-            <div className='w-20 h-60 border-4 border-black' onDrop={handleOnDrop} onDragOver={handleDragOver}
-                dangerouslySetInnerHTML={{ __html: widgets }} />
-
-            <div>
-
-
-
-
-                <div className='text-center'>open</div>
-                <div className='w-20 h-60 border-4 border-black'
-                    dangerouslySetInnerHTML={{ __html: review.open }}
-                >
-                </div>
-            </div>
-
-            <div>
-                <div className='text-center'>in progress</div>
-                <div className='w-20 h-60 border-4 border-black'
-                    dangerouslySetInnerHTML={{ __html: review.inprogress }}
-                >
-                </div>
-            </div>
-
-            {/* <div>
-                <div className='text-center'>review</div>
-                <div className='w-20 h-60 border-4 border-black'
-                    dangerouslySetInnerHTML={{ __html: review.review }}
-                >
-                </div>
-            </div>
-
-            <div>
-                <div className='text-center'>done</div>
-                <div className='w-20 h-60 border-4 border-black'
-                    dangerouslySetInnerHTML={{ __html: review.done }}
-                >
-                </div>
-            </div> */}
-
-        </div>
-    )
-}
-
-export default Projects
+export default Projects;
